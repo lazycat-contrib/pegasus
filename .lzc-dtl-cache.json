@@ -1,0 +1,34 @@
+{
+  "name": "小书匠",
+  "package": "cloud.lazycat.app.pegasus",
+  "description": "一款本地优先，去中心化，分布式，支持选择性同步的全平台覆盖笔记软件",
+  "homepage": "https://github.com/suziwen/markdownxiaoshujiang",
+  "author": "suziwen",
+  "app_features": [
+    "background_task",
+    "public_path"
+  ],
+  "subdomain": "pegasus",
+  "version": "1.6.0",
+  "public_paths": [
+    "/"
+  ],
+  "iconPath": "icon.png",
+  "composePath": "docker-compose.yml",
+  "unsupported_platforms": [],
+  "lastRouteType": "from_compose",
+  "port_mappings": {
+    "pegasus_80_80": {
+      "use": true,
+      "type": "http",
+      "path": "/",
+      "targetPath": "/"
+    }
+  },
+  "image_suziwen_pegasus": {
+    "originalImage": "suziwen/pegasus",
+    "pushTarget": "none"
+  },
+  "pegasus_volume_/opt/couchdb/data_action": "emptyDir",
+  "pegasus_volume_/opt/couchdb/data_location": "app_data"
+}

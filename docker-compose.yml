@@ -1,0 +1,8 @@
+services:
+    pegasus:
+        container_name: story-writer
+        ports:
+            - 80:80
+        volumes:
+            - /home/couchdb/data:/opt/couchdb/data
+        image: suziwen/pegasus
