@@ -8,7 +8,7 @@ application:
       backend: http://pegasus:80/
 services:
   pegasus:
-    # upstream: docker.io/suziwen/pegasus:1.6.0
-    image: docker.io/suziwen/pegasus:1.6.0
+    # upstream: docker.io/suziwen/pegasus:1.7.0
+    image: registry.lazycat.cloud/czyt/suziwen/pegasus:c52ddd140c785e24
     binds:
       - /lzcapp/var/data:/opt/couchdb/data
