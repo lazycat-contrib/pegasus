@@ -18,6 +18,6 @@ application:
     - /=http://pegasus:80/
 services:
   pegasus:
-    image: docker.hlmirror.com/suziwen/pegasus:1.6
+    image: docker.hlmirror.com/suziwen/pegasus:1.6.0
     binds:
       - /lzcapp/var/data:/opt/couchdb/data
