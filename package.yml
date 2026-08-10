@@ -1,0 +1,14 @@
+package: cloud.lazycat.app.pegasus
+version: 1.6.0
+name: 小书匠
+description: 一款本地优先，去中心化，分布式，支持选择性同步的全平台覆盖笔记软件
+min_os_version: 1.5.0
+homepage: https://github.com/suziwen/markdownxiaoshujiang
+author: suziwen
+locales:
+  zh:
+    name: 小书匠
+    description: 一款本地优先，去中心化，分布式，支持选择性同步的全平台覆盖笔记软件
+  en:
+    name: Pegasus
+    description: A local-first, decentralized, distributed cross-platform note-taking app with selective sync.

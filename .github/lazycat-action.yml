@@ -1,0 +1,47 @@
+version: 1
+
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: output/application.lpk
+  target_arch: amd64
+
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: image
+    image: pegasus
+
+build:
+  run_buildscript: false
+
+images:
+  - id: pegasus
+    target: service
+    service: pegasus
+    source: docker.io/suziwen/pegasus
+    channel: stable
+    sort: semver
+    tag_regex: '^\d+\.\d+\.\d+$'
+    delivery:
+      mode: lazycat
+
+stores:
+  official:
+    enabled: true
+    skip_if_version_exists: true
+    create_if_missing: true
+    retry:
+      enabled: false
+    application:
+      language: zh
+      name: 小书匠
+      source: https://github.com/suziwen/markdownxiaoshujiang
+      source_author: suziwen
+  private:
+    enabled: true
+    skip_if_version_exists: true
+    name: 小书匠
+    summary: Published from GitHub Actions
